@@ -15,7 +15,9 @@ comment:  Try to write a short comment about
 script:  https://cdnjs.cloudflare.com/ajax/libs/echarts/4.1.0/echarts-en.min.js
 -->
 
-# Versuchsprotokoll für das Praktikum *Drehen mit Fernzugriff*
+# **Versuchsprotokoll** ...
+
+... für das Praktikum *Drehen mit Fernzugriff*
 
 
 Hier sind alle Beobachtungen und Ergebnisse aller Versuche des Praktikums zu protokollieren. Mit der Abgabe eines vollständigen Protokolles ist das Praktikum abgeschlossen.
@@ -27,13 +29,13 @@ Hier sind alle Beobachtungen und Ergebnisse aller Versuche des Praktikums zu pro
 0;1,5;2,4;0,2
 1;1,8;2,1;0,5
 2;1,1;2,9;0,8
+3;1,1;2,9;-0,8
 ```
 <script>
-let data = `@input`.replace(/,/g, ".")
+let data = `@input`.replace(/,/g, ".");
 
-
-
-let split = data.match(/(\d+(?:\.\d+)?)/g)
+let split = data.match(/\d+(?:\.\d+)?|\-\d+(?:\.\d+)?/g);
+//document.write(split);
 let T = []
 let Fx = []
 let Fy = []
@@ -66,36 +68,36 @@ function plotData(t, x, y, z) {
   let chart = echarts.init(main);
 
   let option = {
+
     title : {
       display: false,
-      text: 'Zerspankraft',
+      text: "Zerspankraft",
       subtext: 'Drehen',
       itemGap: 10,
-            textAlign: 'auto',
-            textVerticalAlign: 'middle',
-            textStyle: {
-              fontSize: 30,
-            },
-            subtextStyle: {
-              fontSize: 20,
-            },
-          },
+      textAlign: 'auto',
+      textVerticalAlign: 'middle',
+      textStyle: {
+        fontSize: 30,
+      },
+      subtextStyle: {
+        fontSize: 20,
+      },
+    },
 
-          grid: {
-            top: 100,
-          },
+    grid: {
+      top: 120,
+    },
 
     legend: {
         data:['Fx', 'Fy', 'Fz'],
-        top: 50,
-          itemGap: 30,
-          itemWidth: 50,
-          itemHeight: 20,
-          symbolKeepAspect: false,
-          textStyle: {
-            fontSize: 24,
-          },
-      },
+        top: 80,
+        itemGap: 30,
+        itemWidth: 50,
+        itemHeight: 20,
+        textStyle: {
+          fontSize: 24,
+        },
+    },
 
     toolbox: {
       show : true,
@@ -104,24 +106,27 @@ function plotData(t, x, y, z) {
         dataZoom : {show: true},
         dataView : {show: true, readOnly: false},
         restore : {show: true},
-        saveAsImage : {show: true},
+        saveAsImage : {
+          show: true,
+          pixelRatio: 4,
+        },
       },
     },
 
-    xAxis : [{
-      type : 'value',
+    xAxis: [{
+      type: 'value',
       name: 'Zeit in s',
       nameLocation: 'middle',
       nameGap: 40,
       axisLabel: {
         fontSize: 20,
-    },
-    nameTextStyle: {
-      fontSize: 20,
-    },
-  }],
+      },
+      nameTextStyle: {
+        fontSize: 20,
+      },
+    }],
 
-    yAxis : [{
+    yAxis: [{
       type : 'value',
       name: 'Kraft in N',
       nameLocation: 'middle',
@@ -134,7 +139,8 @@ function plotData(t, x, y, z) {
       },
     }],
 
-    series : [ {
+
+    series : [{
       name:'Fx',
       type:'line',
       data: fx,
@@ -171,7 +177,7 @@ function plotData(t, x, y, z) {
 </script>
 
 
-<div id="main" class="persistent" style="position: relative; width:100%; height:400px;" hidden="true"></div>
+<div id="main" style="position:relative; width:100%; height:600%;" hidden="true"></div>
 
 
 # Testvideos
