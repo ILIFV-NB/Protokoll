@@ -30,6 +30,9 @@ Hier sind alle Beobachtungen und Ergebnisse aller Versuche des Praktikums zu pro
 1;1,8;2,1;0,5
 2;1,1;2,9;0,8
 3;1,1;2,9;-0,8
+4;1,1;2,9;-0,4
+5;1,1;2,9;0,8
+6;1,1;2,9;-0,6
 ```
 <script>
 let data = `@input`.replace(/,/g, ".");
