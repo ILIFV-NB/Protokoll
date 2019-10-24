@@ -194,3 +194,31 @@ style = "height: 446px; width: 793px; margin: 0em 0em; "
 -->
 
 <iframe width="793" height="446" src="https://www.youtube.com/embed/bICfKRyKTwE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+# Test Dateien laden
+
+<input type="file" onchange="getFileContent(this.files)">
+<pre id="content">
+</pre>
+
+
+<script>
+window.getFileContent = (files) => {
+	if (files.length !== 1) {
+  	// Sicherstellen, dass nur eine Datei hochgeladen wurde.
+    return;
+  }
+  const reader = new FileReader();
+  reader.addEventListener("loadend", () => {
+  	// in reader.result stehen die bytes
+    // also müssen wir es noch in text umwandeln.
+
+    const decoder = new TextDecoder();
+    const textValue = decoder.decode(reader.result);
+
+    // Jetzt kannst du dinge mit dem text machen
+  	document.getElementById("content").innerText = textValue;
+  });
+  reader.readAsArrayBuffer(files[0]);
+}
+</script>
