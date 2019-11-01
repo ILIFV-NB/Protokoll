@@ -213,29 +213,44 @@ function plotData(t, x, y, z) {
 
 ### Rauheitskenngrößen
 
-``` cvs (Messung - Ra in µm - Rz in µm - Rmax in µm)
-1 0,5;2,1;2,5
-2;0,8;3,0;3,3
-3;0,6;2,5;2,9
-```
+Lade eine Datei mit deiner Zerspankraftmessung hoch: <input type="file" onchange="getFileContent(this.files)">
+
 <script>
-let data1 = `@input`.replace(/,/g, ".");
+window.getFileContent = (files) => {
+	if (files.length !== 1) {
+  	// Sicherstellen, dass nur eine Datei hochgeladen wurde.
+    return;
+  }
+  const reader1 = new FileReader();
+  reader1.addEventListener("loadend", () => {
+  	// in reader.result stehen die bytes
+    // also müssen wir es noch in text umwandeln.
 
-let split1 = data1.match(/\d+(?:\.\d+)?|\-\d+(?:\.\d+)?/g);
-//document.write(split1);
-let M = []
-let Ra = []
-let Rz = []
-let Rmax = []
+    const decoder1 = new TextDecoder();
+    const textValue1 = decoder1.decode(reader1.result);
 
-for(let i=0; i<split1.length; i=i+4) {
-  M.push(parseFloat(split1[i]));
-  Ra.push(parseFloat(split1[i+1]));
-  Rz.push(parseFloat(split1[i+2]));
-  Rmax.push(parseFloat(split1[i+3]));
-};
+    const data1 = textValue1.replace(/,/g, ".");
 
-plotData(M, Ra, Rz, Rmax);
+    const split1 = data1.match(/\d+(?:\.\d+)?|\-\d+(?:\.\d+)?/g);
+    const M = []
+    const Ra = []
+    const Rz = []
+    const Rmax = []
+
+    for(let i=0; i<split1.length; i=i+4) {
+      M.push(parseFloat(split1[i]));
+      Ra.push(parseFloat(split1[i+1]));
+      Rz.push(parseFloat(split1[i+2]));
+      Rmax.push(parseFloat(split1[i+3]));
+    }
+
+    plotData(M, Ra, Rz, Rmax);
+
+    // Jetzt kannst du dinge mit dem text machen
+  	document.getElementById("content").innerText = textValue1;
+  });
+  reader1.readAsArrayBuffer(files[0]);
+}
 
 function plotData(t1, x1, y1, z1) {
 
