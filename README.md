@@ -33,14 +33,16 @@ style = "height: 446px; width: 793px; margin: 0em 0em; "
 <iframe width="793" height="446" src="https://www.youtube.com/embed/bICfKRyKTwE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-# Test JS-Code
+# Beispiele: Diagramme erzeugen
 
-HTML Code zum einbetten in die Seite (File Input)
+* [Zerspankräfte Drehen](#6)<br/>
+* [Rauheitskenngrößen](#7)<br/>
+* [Rauheitsprofile](#8)<br/>
+* [Durchmesser](#9)
 
-<input type="file" onchange="getFileContent(this.files)">
-<pre id="content">
-</pre>
+### Zerspankräfte Drehen
 
+Lade eine Datei mit deiner Zerspankraftmessung hoch: <input type="file" onchange="getFileContent(this.files)">
 
 <script>
 window.getFileContent = (files) => {
@@ -56,48 +58,28 @@ window.getFileContent = (files) => {
     const decoder = new TextDecoder();
     const textValue = decoder.decode(reader.result);
 
+    const data = textValue.replace(/,/g, ".");
+
+    const split = data.match(/\d+(?:\.\d+)?|\-\d+(?:\.\d+)?/g);
+    const T = []
+    const Fx = []
+    const Fy = []
+    const Fz = []
+
+    for(let i=0; i<split.length; i=i+4) {
+      T.push(parseFloat(split[i]));
+      Fx.push(parseFloat(split[i+1]));
+      Fy.push(parseFloat(split[i+2]));
+      Fz.push(parseFloat(split[i+3]));
+    }
+
+    plotData(T, Fx, Fy, Fz);
+
     // Jetzt kannst du dinge mit dem text machen
   	document.getElementById("content").innerText = textValue;
   });
   reader.readAsArrayBuffer(files[0]);
 }
-</script>
-
-
-# Beispiele: Diagramme erzeugen
-
-* [Zerspankräfte Drehen](#6)<br/>
-* [Rauheitskenngrößen](#7)<br/>
-* [Rauheitsprofile](#8)<br/>
-* [Durchmesser](#9)
-
-### Zerspankräfte Drehen
-
-``` cvs (Zeit in s - Kraft Fx in N - Kraft Fy in N - Kraft Fz in N)
-0;1,5;2,4;0,2
-1;1,8;2,1;0,5
-2;1,1;2,9;0,8
-3;1,1;2,9;-0,8
-```
-<script>
-
-let data = `@input`.replace(/,/g, ".");
-
-let split = data.match(/\d+(?:\.\d+)?|\-\d+(?:\.\d+)?/g);
-//document.write(split);
-let T = []
-let Fx = []
-let Fy = []
-let Fz = []
-
-for(let i=0; i<split.length; i=i+4) {
-  T.push(parseFloat(split[i]));
-  Fx.push(parseFloat(split[i+1]));
-  Fy.push(parseFloat(split[i+2]));
-  Fz.push(parseFloat(split[i+3]));
-}
-
-plotData(T, Fx, Fy, Fz);
 
 function plotData(t, x, y, z) {
 
