@@ -22,6 +22,8 @@ script:  https://cdnjs.cloudflare.com/ajax/libs/echarts/4.1.0/echarts-en.min.js
 
 <br/>
 
+Videos aus dem Projektordner (Pfad auf GitHub):
+
 !?[movie](https://raw.githubusercontent.com/ILIFV-NB/TestKurs/master/movies/math.mp4)<!--
 style = "height: 446px; width: 793px; "
 -->
@@ -29,6 +31,11 @@ style = "height: 446px; width: 793px; "
 !?[movie](https://raw.githubusercontent.com/ILIFV-NB/TestKurs/master/movies/test1_NX8.mp4)<!--
 style = "height: 446px; width: 793px; "
 -->
+
+<br/>
+Videos aus dem Internet (YouTube):
+
+!?[embedded media](https://youtu.be/bICfKRyKTwE)
 
 <iframe width="793" height="446" src="https://www.youtube.com/embed/bICfKRyKTwE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
