@@ -1039,3 +1039,11 @@ function plotData(t3, x3) {
 ![image](images/Eingabefeld-Kraftverlauf.jpg)<!--
 style = "width: 100%; "
 -->
+
+![image](images/Eingabefeld-Kraftverlauf.jpg)<!--
+style = "width: 100%; "
+-->
+
+![image](images/Eingabefeld-Kraftverlauf.png)<!--
+style = "width: 100%; "
+-->
