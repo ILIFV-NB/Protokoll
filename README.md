@@ -1036,6 +1036,6 @@ function plotData(t3, x3) {
 
 # Test Bilder
 
-![image](images/Eingabefeld-Kraftverlauf.png)<!--
+![image](images/Eingabefeld-Kraftverlauf.jpg)<!--
 style = "width: 100%; "
 -->
