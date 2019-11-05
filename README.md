@@ -1040,10 +1040,13 @@ function plotData(t3, x3) {
 style = "width: 100%; "
 -->
 
-![image](images/Eingabefeld-Kraftverlauf.jpg)<!--
+![image](images/Eingabefeld-Kraftverlauf.png)<!--
 style = "width: 100%; "
 -->
 
-![image](images/Eingabefeld-Kraftverlauf.png)<!--
+<br/>
+Bild geladen mit absoluter URL:
+
+![image](https://raw.githubusercontent.com/ILIFV-NB/TestKurs/master/images/Eingabefeld-Kraftverlauf.jpg)<!--
 style = "width: 100%; "
 -->
