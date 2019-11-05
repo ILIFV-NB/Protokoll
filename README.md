@@ -18,11 +18,30 @@ script:  https://cdnjs.cloudflare.com/ajax/libs/echarts/4.1.0/echarts-en.min.js
 
 # Testvideos ...
 
-... mit absoluten URLs - jeht
+Videos aus dem **Projektordner**
+
+~~1. Möglichkeit **lokaler Pfad** - derzeit **nicht** möglich~~
+
+Ein Video, das sich in Ihrem Projektordner (also lokal auf ihrem Rechner bzw. online bei GitHub) befindet, binden Sie wie ein Bild ein. Damit sich die Größe des Videos an die Größe ihres Browsers anpasst, ergänzen Sie den Pfad wie folgt:
+
+`!?[movie](movies/math.mp4)<!--`
+<br/>
+`style = "width: 100%; "`
+<br/>
+`-->`
+
+!?[movie](movies/math.mp4)<!--
+style = "width: 100%; "
+-->
 
 <br/>
+~~2. Möglichkeit **absolute URLs (Pfad auf GitHub)**~~
 
-Videos aus dem Projektordner (Pfad auf GitHub):
+`?[movie](https://raw.githubusercontent.com/ILIFV-NB/TestKurs/master/movies/math.mp4)<!--`
+<br/>
+`style = "height: 446px; width: 793px; "`
+<br/>
+`-->`
 
 !?[movie](https://raw.githubusercontent.com/ILIFV-NB/TestKurs/master/movies/math.mp4)<!--
 style = "height: 446px; width: 793px; "
@@ -33,9 +52,17 @@ style = "height: 446px; width: 793px; "
 -->
 
 <br/>
-Videos aus dem Internet (YouTube):
+Videos aus dem **Internet** (YouTube):
+
+~~1. Möglichkeit **Video-URL** - im Moment im eLab **nicht möglich**~~
+
+Öffnen des gewünschten Videos auf YouTube, Klick mit der rechten Maustaste darauf und  ~~Video-URL kopieren~~ wählen. Diese an entsprechender Stelle im Dokument platzieren  - dort, wo normalerweise der lokale Pfad aufgeführt sit:
+
+`!?[embedded media](https://youtu.be/bICfKRyKTwE)`
 
 !?[embedded media](https://youtu.be/bICfKRyKTwE)
+
+~~2. Möglichkeit **Einbettungscode**~~
 
 <iframe width="793" height="446" src="https://www.youtube.com/embed/bICfKRyKTwE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -1006,3 +1033,9 @@ function plotData(t3, x3) {
 
 
 <div id="main3" style="position: relative; width:100%; height:600%;" hidden="true"></div>
+
+# Test Bilder
+
+![image](images/Eingabefeld-Kraftverlauf.png)<!--
+style = "width: 100%; "
+-->
