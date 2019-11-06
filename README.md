@@ -66,13 +66,51 @@ Videos aus dem **Internet** (YouTube):
 
 <iframe width="793" height="446" src="https://www.youtube.com/embed/bICfKRyKTwE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+# Testbilder ...
+
+Bilder aus dem **Projektordner**
+
+~~1. Möglichkeit **lokaler Pfad** - derzeit **nicht** möglich~~$^* $
+Ein Foto, das sich im Projektordner (also lokal auf dem Rechner bzw. online bei GitHub) befindet, wie ein Video einbinden. Damit sich die Größe des Bildes an die Größe des Browsers anpasst, den Pfad wie folgt ergänzen:
+
+`![image](images/Eingabefeld-Kraftverlauf.png)<!--`
+<br/>
+`style = "width: 100%; "`
+<br/>
+`-->`
+
+![image](images/Eingabefeld-Kraftverlauf.png)<!--
+style = "width: 100%; "
+-->
+
+~~Erläuterung:~~
+
+Um ein Bild einzubinden, muss dieses in dem zugehörigen Projektordner abgelegt sein. Dieser befindet sich in der Regel lokal auf dem Rechner im Ordner ~~GitHub~~ (synchronisiert mit dem Projektordner auf GitHub) und trägt idealerweise den Namen des Kurses. In jedem Projektordner sollten Ordner angelegt sein, die eigens für Fotos bzw. Videos zur Verfügung stehen. Diese können bspw. *images* bzw. *movies* heißen. (Weitere Erläuterungen unter [GitHub -> 4.](#4) bzw. [Atom -> 3.](#5))
+
+In Atom innerhalb der Textdatei ~~img~~ eingeben und die ~~Tabtaste~~ drücken. Es erscheint `![]()`. (Voraussetzung dafür ist die Installation des [Plugins](https://atom.io/packages/search?utf8=%E2%9C%93&q=liascript&commit=Search) *liascript-snippets*.) In die eckigen Klammern einen Hinweis eingeben, der verrät, um welche Art Datei es sich handelt. Für ein Foto kann dieser z.B. das Wort *image* sein. In die runden Klammern wird der Pfad innerhalb des Projektordners eingetragen. Heißt der Fotoordner *images* und das Foto *ErstesKursFoto.png*, sieht der Pfad wie folgt aus: `![image](images/ErstesKursFoto.png)`. In der Preview (**Alt$+$L**) bzw. im Browser (**Strg$+$N**) erscheint an dieser Stelle das Foto.
+
+$^* $Hier gilt also das Gleiche wie für Videos: **absolute** URLs nutzen, um die Bilder direkt im Netz laden zu können.
+
+<br/>
+~~2. Möglichkeit **absolute URLs (Pfad auf GitHub)**~~
+
+`![image](https://raw.githubusercontent.com/ILIFV-NB/TestKurs/master/images/Eingabefeld-Kraftverlauf.jpg)<!--`
+<br/>
+`style = "width: 100%; "`
+<br/>
+`-->`
+
+![image](https://raw.githubusercontent.com/ILIFV-NB/TestKurs/master/images/Eingabefeld-Kraftverlauf.jpg)<!--
+style = "width: 100%; "
+-->
+
 
 # Beispiele: Diagramme erzeugen
 
-* [Zerspankräfte Drehen](#3)<br/>
-* [Rauheitskenngrößen](#4)<br/>
-* [Rauheitsprofile](#5)<br/>
-* [Durchmesser](#9)
+* [Zerspankräfte Drehen](#4)<br/>
+* [Rauheitskenngrößen](#5)<br/>
+* [Rauheitsprofile](#6)<br/>
+* [Durchmesser](#10)
 
 ### Zerspankräfte Drehen
 
@@ -1033,20 +1071,3 @@ function plotData(t3, x3) {
 
 
 <div id="main3" style="position: relative; width:100%; height:600%;" hidden="true"></div>
-
-# Test Bilder
-
-![image](images/Eingabefeld-Kraftverlauf.jpg)<!--
-style = "width: 100%; "
--->
-
-![image](images/Eingabefeld-Kraftverlauf.png)<!--
-style = "width: 100%; "
--->
-
-<br/>
-Bild geladen mit absoluter URL:
-
-![image](https://raw.githubusercontent.com/ILIFV-NB/TestKurs/master/images/Eingabefeld-Kraftverlauf.jpg)<!--
-style = "width: 100%; "
--->
