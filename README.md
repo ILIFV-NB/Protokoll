@@ -1071,12 +1071,3 @@ function plotData(t3, x3) {
 
 
 <div id="main3" style="position: relative; width:100%; height:600%;" hidden="true"></div>
-
-# Input
-
-| <input type="submit" name="vorname" size="10" maxlength="10">|
-| <form action="/action_page.php">
-  <input type="text" name="fname"><br>
-  Last name: <input type="text" name="lname"><br>
-  <input type="submit" value="Submit">
-</form> |
