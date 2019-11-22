@@ -1074,4 +1074,9 @@ function plotData(t3, x3) {
 
 # Input
 
-| <input type="text" name="vorname" size="10" maxlength="10">|
+| <input type="submit" name="vorname" size="10" maxlength="10">|
+| <form action="/action_page.php">
+  <input type="text" name="fname"><br>
+  Last name: <input type="text" name="lname"><br>
+  <input type="submit" value="Submit">
+</form> |
