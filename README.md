@@ -1071,3 +1071,9 @@ function plotData(t3, x3) {
 
 
 <div id="main3" style="position: relative; width:100%; height:600%;" hidden="true"></div>
+
+# Input
+<form>
+      <input id="groesse" type="number" min="100" max="220" step="1">
+      <input id="masse" type="number" min="30" max="225" step="0.5">
+</form>
