@@ -1077,3 +1077,8 @@ function plotData(t3, x3) {
       <input id="groesse" type="number" min="100" max="220" step="1">
       <input id="masse" type="number" min="30" max="225" step="0.5">
 </form>
+
+<br/>
+Versuch 1: Tragen Sie hier bitte hintereinander alle Werte zu Versuch 1 ein! (ap; vc; f; n; Versuch)
+
+[[___ ___]]
