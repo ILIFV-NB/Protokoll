@@ -1079,6 +1079,11 @@ function plotData(t3, x3) {
 </form>
 
 <br/>
+<label for="fname">First name:</label>
+<input type="text" id="fname" name="fname">
+
+
+<br/>
 Versuch 1: Tragen Sie hier bitte hintereinander alle Werte zu Versuch 1 ein! (ap; vc; f; n; Versuch)
 
 [[___ ___]]
