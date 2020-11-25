@@ -1087,3 +1087,45 @@ function plotData(t3, x3) {
 Versuch 1: Tragen Sie hier bitte hintereinander alle Werte zu Versuch 1 ein! (ap; vc; f; n; Versuch)
 
 [[___ ___]]
+
+
+# Test - Bild in Tabellen integrieren (Werkzeugmaschine)
+
+~~**Drehmaschine**~~
+
+![image](https://raw.githubusercontent.com/ILIFV-NB/Maschinen-Geraetetechnik/master/images/EMCO.jpg)<!--
+style = "width: 75%; "
+-->
+
+*EMCOMAT E-300, zyklengesteuerte Drehmaschine*
+
+<br>
+
+|**Technische Daten**|**Antriebsleistung und Drehmomentenverlauf**|
+|![image](https://raw.githubusercontent.com/ILIFV-NB/Maschinen-Geraetetechnik/master/images/Technische_Daten_EMCO.png)<!--
+style = "width: 75%; "
+-->|![image](https://raw.githubusercontent.com/ILIFV-NB/Maschinen-Geraetetechnik/master/images/Antriebsleistung_und_Drehmomentenverlauf_E300.png)<!--
+style = "width: 75%; "
+-->|
+
+
+**Technische Daten**
+
+|Spitzenweite|$mm$ |$1500$ |
+| Umlauf- $\text{\O}$ über Bett | $mm$|$570$ |
+|Umlauf- $\text{\O}$ über Schlitten | $mm$ | $340$ |
+| Vorschubkraft X max. | $kN$ | $10$ |
+| Vorschubkraft Z max. | $kN$|$15$|
+| Spindeldrehzahl| $U/min$| $0\space-\space2500$|
+|Drehzahlregelung| | stufenlos|
+| Antriebsleistung bei $40/100\space$ % ED|$kW $| $25/17$|
+| max. Nennmoment an der Hauptspindel| $Nm$| $764/519$|
+|Prozesskühlung| | Emulsion |
+
+<br>
+
+**Antriebsleistung und Drehmomentenverlauf**
+
+![image](https://raw.githubusercontent.com/ILIFV-NB/Maschinen-Geraetetechnik/master/images/Antriebsleistung_und_Drehmomentenverlauf_E300.png)<!--
+style = "width: 75%; "
+-->
